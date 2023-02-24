@@ -1,0 +1,22 @@
+{
+  "name": "SiteInject",
+  "version": "0.1",
+  "description": "This is a Chrome web extension that enables users to run their automation on the internet.",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "https://raw.githubusercontent.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {}
+}
